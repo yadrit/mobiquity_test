@@ -25,4 +25,6 @@ Right now there is a problem with test #7, caused by bug in Chromium (hard to cl
 
   Voila! Test should run and pass.
 
-# if for some reason you see that tests can't be run, ask me. I also include the screencast of how I run them on my machine (please check mobiquity_test.swf file)
+# important info
+
+if for some reason you see that tests can't be run, ask me. I also include the screencast of how I run them on my machine (please check mobiquity_test.swf file)
