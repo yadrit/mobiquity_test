@@ -2,6 +2,8 @@
 
 I’ve chosen JS + Protractor because it uses Selenium Webdriver API, it is easier and faster to setup and I can concentrate on tests rather than on solving problems with environment. Moreover the install documentation will be shorter
 
+Right now there is a problem with test #7, caused by bug in Chromium (hard to close browser alert, need to use hacks) - working on solving it right now. The rest of tests work good.
+
 
 # Please read the description below in order to set-up invironment:
 
@@ -22,3 +24,5 @@ I’ve chosen JS + Protractor because it uses Selenium Webdriver API, it is easi
 >protractor conf.js
 
   Voila! Test should run and pass.
+
+# if for some reason you see that tests can't be run, ask me. I also include the screencast of how I run them on my machine (please check mobiquity_test.swf file)
