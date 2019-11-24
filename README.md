@@ -21,4 +21,4 @@ I’ve chosen JS + Protractor because it uses Selenium Webdriver API, it is easi
 
 >protractor conf.js
 
-Voila! Test should run and pass.
+  Voila! Test should run and pass.
