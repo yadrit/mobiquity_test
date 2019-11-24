@@ -5,6 +5,7 @@ describe('Employees app tests: ', function() {
 let logoutButton = element(by.xpath('/html/body/div/header/div/p[1]'));
 let greeting = element(by.id('greetings'));
 let invalidLoginAndPassword = element(by.xpath('//*[@id="login-form"]/fieldset/p[1]'))
+let createButton = element(by.xpath('//*[@id="bAdd"]'))
 
     beforeEach(function() {
         browser.manage().window().maximize();
@@ -27,7 +28,9 @@ let invalidLoginAndPassword = element(by.xpath('//*[@id="login-form"]/fieldset/p
     await browser.driver.sleep('3000'); 
 
 	//Verify user is navigated to the employees list view
+	//Verify there is no message about incorrect login and password shown
     await expect(invalidLoginAndPassword.isPresent()).toBe(false);
+    await expect(createButton.isPresent()).toBe(true);
   });
 
   it('Login into application with incorrect credentials (Password)', async function() {
@@ -41,7 +44,9 @@ let invalidLoginAndPassword = element(by.xpath('//*[@id="login-form"]/fieldset/p
     await browser.driver.sleep('3000'); 
 
 	//Verify user is not navigated to the employees list view
+	//Verify there is no message about incorrect login and password shown
     await expect(invalidLoginAndPassword.isDisplayed()).toBe(true);
+    await expect(createButton.isPresent()).toBe(false);
   });
 
   it('Login into application with incorrect credentials (Login)', async function() {
@@ -55,7 +60,9 @@ let invalidLoginAndPassword = element(by.xpath('//*[@id="login-form"]/fieldset/p
     await browser.driver.sleep('3000'); 
 
 	//Verify user is not navigated to the employees list view
-    await expect(invalidLoginAndPassword.isDisplayed()).toBe(true);    
+	//Verify there is no message about incorrect login and password shown
+    await expect(invalidLoginAndPassword.isDisplayed()).toBe(true);
+    await expect(createButton.isPresent()).toBe(false);   
   });
 
   it('Login into application with incorrect credentials (Login and Password)', async function() {
@@ -69,6 +76,8 @@ let invalidLoginAndPassword = element(by.xpath('//*[@id="login-form"]/fieldset/p
     await browser.driver.sleep('3000'); 
 
 	//Verify user is not navigated to the employees list view
+	//Verify there is no message about incorrect login and password shown
     await expect(invalidLoginAndPassword.isDisplayed()).toBe(true);
+    await expect(createButton.isPresent()).toBe(false);
   });
 });
